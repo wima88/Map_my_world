@@ -195,6 +195,9 @@
     </collision>
   </link>
 
+<!-- link for the RGB-D  -->
+  <link name="camera_link_optical">
+  </link>
 
     
 <!--joint for the left wheel-->
@@ -229,7 +232,7 @@
     <axis xyz="0 1 0" rpy="0 0 0"/>
   </joint>
 
-<!--joint for the camera-->
+<!--joint for the LIDAR-->
 
    <joint type="fixed" name="hokuyo_joint">
     <origin xyz="0.15 0.0 0.1" rpy="0 0 0"/>
@@ -237,6 +240,16 @@
     <parent link="chassis"/>
     <axis xyz="0 1 0" rpy="0 0 0"/>
    </joint>
+
+<!--joint for the RGB-D camera-->
+  <joint name="camera_optical_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="-1.5707 0 -1.5707"/>
+    <parent link="camera_link"/>
+    <child link="camera_link_optical"/>
+  </joint>
+
+
+
 
 </robot>
 

@@ -18,6 +18,6 @@ on="1.4">
         <view_controller>orbit</view_controller>
       </camera>
     </gui>
-
+<plugin filename="libcollision_map_creator.so" name="collision_map_creator"/>
   </world>
 </sdf>

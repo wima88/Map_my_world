@@ -1,0 +1,6 @@
+<launch>
+   <!-- tlelop_pkg-->
+    <arg name="_speed" default="0.2"/>
+    <arg name="_turn" default="0.2"/>
+    <node name="teleop" pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py"/>
+</launch>
